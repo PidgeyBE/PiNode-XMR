@@ -10,7 +10,7 @@ then
 #Start prune binary
 cd /home/pinodexmr/monero-active/
 ./monero-blockchain-prune
-	
+
 #Update prune status to show binary run
 	echo "#!/bin/bash
 PRUNE_STATUS=1" > /home/pinodexmr/prunestatus.sh
@@ -20,6 +20,7 @@ PRUNE_STATUS=1" > /home/pinodexmr/prunestatus.sh
 echo " --prune-blockchain" >> /home/pinodexmr/monerod-start.sh
 echo " --prune-blockchain" >> /home/pinodexmr/monerod-start-tor.sh
 echo " --prune-blockchain" >> /home/pinodexmr/monerod-start-mining.sh
+echo " --prune-blockchain" >> /home/pinodexmr/monerod-start-mining-public.sh
 sleep "1"
 else
 	echo "Pruning command has already been run"
